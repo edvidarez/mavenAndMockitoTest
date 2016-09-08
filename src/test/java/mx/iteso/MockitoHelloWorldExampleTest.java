@@ -33,6 +33,7 @@ public class MockitoHelloWorldExampleTest {
 
     @Test(expected=FooNotAvailable.class)
     public void fooNotAvailable() {
+
         Bar bar = new Bar();
         System.out.println("Foo is down so will not respond");
         when(foo.greet()).thenReturn(null);
@@ -68,5 +69,5 @@ public class MockitoHelloWorldExampleTest {
                 .thenThrow(new InvalidQuestion());
         bar.questionStrictly(foo, invalidQuestion);
     }
-
+   
 }
